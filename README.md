@@ -2,11 +2,6 @@
 
 **Authors**: [Pyae Sone Myo](https://github.com/Rickaym), [Hsu Pyae Han](https://github.com/itsmejewel)
 
-## Table of Contents
-
-1. [Setup](#setup)
-2. [Project Structure](#project-structure)
-
 ## Setup
 
 Follow the guide below to run the website.
