@@ -1,4 +1,4 @@
-# Athinchay
+# GUSTO Literature Club Landing Page
 
 **Authors**: [Pyae Sone Myo](https://github.com/Rickaym), [Hsu Pyae Han](https://github.com/itsmejewel)
 
