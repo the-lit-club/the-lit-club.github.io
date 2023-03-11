@@ -29,6 +29,7 @@ body {
     background-color: #F36744;
     border-top: var(--default-border);
     border-bottom: var(--default-border);
+    max-height: 5rem;
 }
 
 .weekly-time-text {
@@ -39,6 +40,13 @@ body {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     letter-spacing: 0.2rem;
+}
+
+.hero-gif {
+    background-image: url("https://i.pinimg.com/originals/31/63/e9/3163e9157f057b1539b408eacc8d7257.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .main-header {
@@ -73,6 +81,7 @@ body {
 
 .lp-left {
     border-right: var(--default-border);
+    padding-left: 4rem;
 }
 
 .hero {
@@ -129,6 +138,33 @@ body {
     background-color: #269887;
 }
 
+.explore-btn {
+    background-color: transparent;
+    color: #F36744;
+    border-radius: 10em;
+    max-width: 15rem;
+    font-family: var(--secondary-header);
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.5em 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: solid 2px #F36744;
+    box-shadow: 0 0 0 0 #F36744;
+  }
+
+.explore-btn:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 #F36744;
+  }
+
+.explore-btn:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 #F36744;
+  }
+
 .hero-btn {
     background-color: #269887;
     color: #FF994D;
@@ -149,41 +185,14 @@ body {
 .hero-btn:hover {
     transform: translateY(-4px) translateX(-2px);
     box-shadow: 2px 5px 0 0 var(--constant-text);
-  };
+  }
 
 .hero-btn:active {
     transform: translateY(2px) translateX(1px);
     box-shadow: 0 0 0 0 var(--constant-text);
-  };
-
-.second-btn {
-    background-color: transparent;
-    color: #FF994D;
-    border-radius: 10em;
-    max-width: 15rem;
-    font-family: var(--secondary-header);
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding: 0.5em 0.5em;
-    padding-left: 1em;
-    padding-right: 1em;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border: var(--default-border);
-    box-shadow: 0 0 0 0 var(--constant-text);
   }
 
-.second-btn:hover {
-    transform: translateY(-4px) translateX(-2px);
-    box-shadow: 2px 5px 0 0 var(--constant-text);
-  };
-
-.second-btn:active {
-    transform: translateY(2px) translateX(1px);
-    box-shadow: 0 0 0 0 var(--constant-text);
-  };
-
-  .marquee {
+.marquee {
     /* position: relative; */
     width: 100vw;
     max-width: 100%;
