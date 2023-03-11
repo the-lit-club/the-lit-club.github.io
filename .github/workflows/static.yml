@@ -51,8 +51,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: static-page
-      - name: Display structure of downloaded files
-        run: ls -R
+          path: ./build/
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
