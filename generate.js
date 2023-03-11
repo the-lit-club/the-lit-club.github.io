@@ -56,7 +56,9 @@ for (const viewFn of fs.readdirSync(config.viewsDirectory)) {
 
 const assetURIs = ["css", "img", "js"].flatMap((subdir) => {
   const parentDir = `${config.staticDirectory}/${subdir}/`;
-  return fs.readdirSync(parentDir).map((fp) => `${parentDir}${fp}`);
+  return fs.existsSync(parentDir)
+    ? fs.readdirSync(parentDir).map((fp) => `${parentDir}${fp}`)
+    : [];
 });
 
 // copy public assets
