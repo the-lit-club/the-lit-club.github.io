@@ -32,12 +32,11 @@ jobs:
           node-version: '16.x'
       - run: npm ci
       - run: npm run build
-      - name: Cache Static Files
-        uses: actions/cache/save@v3
-        id: cached-built-files
+      - name: Upload build artifact
+      - uses: actions/upload-artifact@v3
         with:
-          path: ./build
-          key: ${{ runner.os }}-built-files
+          name: static-page
+          path: ./build/
 
   deploy:
     needs: build
@@ -48,17 +47,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - uses: actions/cache/restore@v3
-        id: cached-built-files
+      - name: Download build artifact
+        uses: actions/download-artifact@v3
         with:
-          path: ./build
-          key: ${{ runner.os }}-built-files
+          name: static-page
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload entire repository
+          # upload build folder
           path: './build/'
       - name: Deploy to GitHub Pages
         id: deployment
