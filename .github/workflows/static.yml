@@ -37,7 +37,7 @@ jobs:
         id: cached-built-files
         with:
           path: ./build
-          key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
+          key: ${{ runner.os }}-built-files
 
   deploy:
     needs: build
@@ -52,7 +52,7 @@ jobs:
         id: cached-built-files
         with:
           path: ./build
-          key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
+          key: ${{ runner.os }}-built-files
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
