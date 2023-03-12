@@ -264,8 +264,8 @@ body {
   }
 
   .main-header {
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 2rem;
+    line-height: 2rem;
   }
 
   .activity-header {
@@ -329,7 +329,7 @@ body {
   
 }
 
-@media (max-width: 290px) {
+@media only screen and (max-width: 281px) {
 
   body {
     overflow-x: hidden;
@@ -409,36 +409,18 @@ body {
   
 }
 
-@media (max-width: 821px) {
-  .main-header {
-    font-size: 4rem;
-    line-height: 4rem;
-  }
-
-  .activity-border {
-    border-bottom: var(--default-border);
-    border-right: none;
-  }
-
-  .activity-border-cancel {
-    border-bottom: none;
-  }
-
-  .track {
-    /* position: absolute; */
-    white-space: nowrap;
-    will-change: transform;
-    animation: marquee 10s linear infinite;
-  }
-  
-}
-
 @media (max-width: 913px) {
-  .main-header {
-    font-size: 6rem;
-    line-height: 6rem;
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
   }
 
+  .main-header {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  
   .activity-border {
     border-bottom: var(--default-border);
     border-right: none;
@@ -447,36 +429,6 @@ body {
   .activity-border-cancel {
     border-bottom: none;
   }
-
-  .track {
-    /* position: absolute; */
-    white-space: nowrap;
-    will-change: transform;
-    animation: marquee 10s linear infinite;
-  }
   
 }
 
-@media (max-width: 541px) {
-  .main-header {
-    font-size: 4rem;
-    line-height: 4rem;
-  }
-
-  .activity-border {
-    border-bottom: var(--default-border);
-    border-right: none;
-  }
-
-  .activity-border-cancel {
-    border-bottom: none;
-  }
-
-  .track {
-    /* position: absolute; */
-    white-space: nowrap;
-    will-change: transform;
-    animation: marquee 10s linear infinite;
-  }
-  
-}
