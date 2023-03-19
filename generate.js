@@ -22,7 +22,7 @@ function renderPartials(hbsContent) {
   Object.keys(partialsMap).forEach(
     (varname) =>
       (hbsContent = hbsContent.replace(
-        new RegExp(`{{> ${varname} }}`, "gi"),
+        new RegExp(`{{> ${varname}\\s?}}`, "gi"),
         partialsMap[varname]
       ))
   );
