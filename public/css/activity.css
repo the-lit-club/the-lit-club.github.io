@@ -1,0 +1,71 @@
+.activity-secondary { 
+    font-family: var(--primary-header);
+    font-size: 4em;
+    line-height: 4rem;
+    letter-spacing: 0.1em;
+    color: var(--constant-text);
+}
+
+.activity-primary { 
+    font-family: var(--primary-header);
+    font-weight: bold;
+    font-size: 6.5em;
+    line-height: 2.5rem;
+    color: var(--constant-text);
+}
+
+.activity-head { 
+    font-family: var(--primary-header);
+    font-weight: bold;
+    font-size: 6em;
+    line-height: 2.5rem;
+    color: var(--constant-text);
+}
+
+.activity-intro {
+    font-family: var(--primary-header);
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: var(--constant-text);
+}
+  
+.activity-nav {
+    border-top: var(--default-border);
+    border-bottom: var(--default-border);
+}
+  
+.activity-nav-two {
+    border-bottom: var(--default-border);
+}
+
+.nav-link {
+    font-family: var(--secondary-header);
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    color: var(--constant-text);
+}
+
+.flex-sm-fill {
+    border-right: var(--default-border);
+}
+
+.nav-hover:hover {
+    color: #5F213D;
+    background-color: #269887;
+}
+
+.active {
+    color: #5F213D;
+    background-color: #f6bc57;
+}
+
+.active:hover {
+    color: #5F213D;
+    background-color: #f6bc57;  
+}
+
+.section-line {
+    color: var(--default-border);
+}
