@@ -4,4 +4,5 @@ module.exports = {
   viewsDirectory: "./views",
   partialsDirectory: "./views/partials",
   buildDirectory: "./build",
+  articlesDirectory: "./public/articles"
 };

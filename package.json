@@ -8,7 +8,8 @@
   },
   "author": "Pyae Sone Myo, Hsu Pyae Han",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.20"
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "showdown": "^2.1.0"
   }
 }

@@ -1,42 +1,17 @@
-/**
- * Supports a tiny part of the handlebars syntax. All HBS files are generated
- * into static HTML files under the build directory.
- */
-
 var fs = require("fs");
 var config = require("./site.config");
-
-const partialsMap = {};
-
-for (const partialFn of fs.readdirSync(config.partialsDirectory)) {
-  if (!partialFn.endsWith(`.${config.extension}`)) {
-    continue;
-  }
-  const contents = fs
-    .readFileSync(`${config.partialsDirectory}/${partialFn}`)
-    .toString();
-  partialsMap[partialFn.slice(0, -4)] = contents;
-}
-
-function renderPartials(hbsContent) {
-  Object.keys(partialsMap).forEach(
-    (varname) =>
-      (hbsContent = hbsContent.replace(
-        new RegExp(`{{> ${varname}\\s?}}`, "gi"),
-        partialsMap[varname]
-      ))
-  );
-  return hbsContent;
-}
-
-function buildHTML(hbsContent) {
-  hbsContent = renderPartials(hbsContent);
-
-  return hbsContent;
-}
+var parser = require("./parser");
+var helpers = require("./helpers");
 
 if (!fs.existsSync(config.buildDirectory)) {
   fs.mkdirSync(config.buildDirectory);
+}
+
+function buildHTML(hbsContent) {
+  hbsContent = parser.renderPartials(hbsContent);
+  hbsContent = parser.executeHelpers(hbsContent, helpers);
+
+  return hbsContent;
 }
 
 // generate static HTML files
