@@ -69,3 +69,12 @@
 .section-line {
     color: var(--default-border);
 }
+
+.activity-desc {
+    font-family: var(--secondary-header);
+    font-size: 1.2em;
+    line-height: 1.2em;
+    color: var(--constant-text);
+    font-weight: bold;
+    
+}
