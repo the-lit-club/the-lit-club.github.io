@@ -326,7 +326,7 @@ body {
     will-change: transform;
     animation: marquee 10s linear infinite;
   }
-  
+
 }
 
 @media only screen and (max-width: 281px) {
@@ -406,7 +406,7 @@ body {
     will-change: transform;
     animation: marquee 10s linear infinite;
   }
-  
+
 }
 
 @media (max-width: 913px) {
@@ -420,7 +420,7 @@ body {
     font-size: 3rem;
     line-height: 3rem;
   }
-  
+
   .activity-border {
     border-bottom: var(--default-border);
     border-right: none;
@@ -429,6 +429,6 @@ body {
   .activity-border-cancel {
     border-bottom: none;
   }
-  
+
 }
 

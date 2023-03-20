@@ -7,9 +7,10 @@ if (!fs.existsSync(config.buildDirectory)) {
   fs.mkdirSync(config.buildDirectory);
 }
 
-function buildHTML(hbsContent) {
+function buildHTML(filename, hbsContent) {
   hbsContent = parser.renderPartials(hbsContent);
   hbsContent = parser.executeHelpers(hbsContent, helpers);
+  hbsContent = parser.renderVariables(hbsContent, {slug: filename});
 
   return hbsContent;
 }
@@ -25,7 +26,7 @@ for (const viewFn of fs.readdirSync(config.viewsDirectory)) {
   const viewName = viewFn.slice(0, -4);
   fs.writeFileSync(
     `${config.buildDirectory}/${viewName}.html`,
-    buildHTML(fileContents)
+    buildHTML(viewName, fileContents)
   );
 }
 
