@@ -4,6 +4,9 @@ var config = require("./site.config");
 var parser = require("./parser");
 
 function renderArticles(partialTemplateName) {
+  /**
+   * This function will render all articles in the articles directory.
+   */
   var converter = new showdown.Converter();
   let articles = "";
   for (const article of fs.readdirSync(config.articlesDirectory)) {

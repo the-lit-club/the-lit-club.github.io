@@ -15,7 +15,7 @@ function buildHTML(filename, hbsContent) {
   return hbsContent;
 }
 
-// generate static HTML files
+// build all views
 for (const viewFn of fs.readdirSync(config.viewsDirectory)) {
   if (!viewFn.endsWith(`.${config.extension}`)) {
     continue;
@@ -37,12 +37,12 @@ const assetURIs = ["css", "img", "js"].flatMap((subdir) => {
     : [];
 });
 
-// copy public assets
+// copy all assets
 for (const assetFp of assetURIs) {
   const oldAssetFp = assetFp.split("/").splice(-2).join("/");
   const newAssetFp = `${config.buildDirectory}/${oldAssetFp}`;
 
-  // make all the required directories for the asset fp
+  // create directory if it doesn't exist
   fs.mkdirSync(newAssetFp.split("/").slice(0, -1).join("/"), {
     recursive: true,
   });
