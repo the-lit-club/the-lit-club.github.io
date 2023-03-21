@@ -8,21 +8,6 @@
  *  {{#helper 'arg1' 'arg2'}}
  */
 
-var fs = require("fs");
-var config = require("./site.config");
-
-const partialsMap = {};
-
-for (const partialFn of fs.readdirSync(config.partialsDirectory)) {
-  if (!partialFn.endsWith(`.${config.extension}`)) {
-    continue;
-  }
-  const contents = fs
-    .readFileSync(`${config.partialsDirectory}/${partialFn}`)
-    .toString();
-  partialsMap[partialFn.slice(0, -4)] = contents;
-}
-
 function renderReExpr(content, expr, replacer) {
   return content.replace(expr, replacer);
 }
@@ -37,12 +22,12 @@ function renderVariables(hbsContent, variableMap) {
   );
 }
 
-function renderPartials(hbsContent) {
+function renderPartials(hbsContent, partialMap) {
   return renderReExpr(
     hbsContent,
     /{{>\s?(?<partialname>[^ ]*)\s?}}/gi,
     function (_, partialname) {
-      return partialsMap[partialname];
+      return partialMap[partialname];
     }
   );
 }

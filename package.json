@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "debug": "nodemon generate.js --ignore ./build/ -e hbs,js,css",
-    "build": "node generate.js"
+    "build": "node generate.js --production"
   },
   "author": "Pyae Sone Myo, Hsu Pyae Han",
   "license": "ISC",
