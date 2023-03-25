@@ -14,9 +14,13 @@ html {
   --default-border: 2px solid var(--constant-text);
 }
 
+* {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 body {
   background-color: var(--bg-color);
-  overflow-x: hidden;
 }
 
 /* HEADER */

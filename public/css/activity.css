@@ -1,5 +1,6 @@
 * {
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 .activity-secondary { 
     font-family: var(--primary-header);
@@ -21,7 +22,7 @@
     font-family: var(--primary-header);
     font-weight: bold;
     font-size: 6em;
-    line-height: 2.5rem;
+    line-height: 6rem;
     color: var(--constant-text);
 }
 
@@ -164,25 +165,23 @@
 /* For Mobile Phones Portrait or Landscape View */
 @media screen and (max-device-width: 640px) {
     .activity-secondary { 
-        font-family: var(--primary-header);
         font-size: 1em;
-        /* line-height: 4rem; */
+        line-height: 1em;
         letter-spacing: 0.1em;
-        color: var(--constant-text);
     }
     
     .activity-primary { 
         font-family: var(--primary-header);
         font-weight: bold;
         font-size: 3em;
-        /* line-height: 6.5rem; */
+        /* line-height: 3em; */
         color: var(--constant-text);
     }
 
     .activity-secondary { 
         font-family: var(--primary-header);
         font-size: 7.5vw;
-        /* line-height: 4rem; */
+        line-height: 1em;
         letter-spacing: 0.1em;
         color: var(--constant-text);
     }
@@ -191,7 +190,7 @@
         font-family: var(--primary-header);
         font-weight: bold;
         font-size: 7vw;
-        /* line-height: 2rem; */
+        line-height: 2rem;
         color: var(--constant-text);
     }
 
@@ -210,4 +209,22 @@
         font-size: 13vw;
         color: var(--constant-text);
     }
+
+    .sim-card {
+        aspect-ratio: 1 / 1 !important;
+        max-width: 400px;
+        border-radius: 1em;
+        border: var(--default-border);
+    }
   }
+
+  @media screen and (min-device-width: 768px)
+and (max-device-width: 820px) {
+    .border-top-add {
+        border-top: var(--default-border);
+    }
+
+    .border-bottom-add {
+        border-bottom: var(--default-border);
+    }
+}
