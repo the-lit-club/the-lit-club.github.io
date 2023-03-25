@@ -22,6 +22,7 @@ body {
 /* HEADER */
 .navbar {
   background-color: var(--nav-bar);
+  width: fill;
 }
 
 /* WEEKLY TIME NOTICE */
@@ -36,7 +37,8 @@ body {
   padding-top: 1rem;
   padding-bottom: 0.1rem;
   font-size: 1.5rem;
-  color: #ffcbfd;
+  color: #fbdafa;
+  /* color: #d446cf; */
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
   letter-spacing: 0.2rem;
@@ -167,7 +169,10 @@ body {
 
 .hero-btn {
   background-color: #269887;
-  color: #FF994D;
+  /* background-color: #0d7062; */
+  color: #ffe5d2;
+  /* color: #ffb781; */
+  /* color: #7dd8d5; */
   border-radius: 10em;
   max-width: 15rem;
   font-family: var(--secondary-header);

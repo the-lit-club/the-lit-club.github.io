@@ -1,7 +1,10 @@
+* {
+    overflow-x: hidden;
+}
 .activity-secondary { 
     font-family: var(--primary-header);
     font-size: 4em;
-    line-height: 4rem;
+    /* line-height: 4rem; */
     letter-spacing: 0.1em;
     color: var(--constant-text);
 }
@@ -10,7 +13,7 @@
     font-family: var(--primary-header);
     font-weight: bold;
     font-size: 6.5em;
-    line-height: 2.5rem;
+    /* line-height: 6.5rem; */
     color: var(--constant-text);
 }
 
@@ -26,7 +29,7 @@
     font-family: var(--primary-header);
     font-weight: bold;
     font-size: 2rem;
-    line-height: 2rem;
+    /* line-height: 2rem; */
     color: var(--constant-text);
 }
   
@@ -105,7 +108,7 @@
     background-color: #f6bc57;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
-    height: 6em;
+    height: fit-content;
 }
 
 #card {
@@ -157,3 +160,54 @@
     line-height: 3rem;
     color: var(--constant-text);
 }
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+    .activity-secondary { 
+        font-family: var(--primary-header);
+        font-size: 1em;
+        /* line-height: 4rem; */
+        letter-spacing: 0.1em;
+        color: var(--constant-text);
+    }
+    
+    .activity-primary { 
+        font-family: var(--primary-header);
+        font-weight: bold;
+        font-size: 3em;
+        /* line-height: 6.5rem; */
+        color: var(--constant-text);
+    }
+
+    .activity-secondary { 
+        font-family: var(--primary-header);
+        font-size: 7.5vw;
+        /* line-height: 4rem; */
+        letter-spacing: 0.1em;
+        color: var(--constant-text);
+    }
+
+    .activity-intro {
+        font-family: var(--primary-header);
+        font-weight: bold;
+        font-size: 7vw;
+        /* line-height: 2rem; */
+        color: var(--constant-text);
+    }
+
+    .flex-sm-fill {
+        border-right: var(--default-border);
+        border-bottom: var(--default-border);
+    }
+
+    .border-cancel {
+        border-bottom: none;
+    }
+
+    .activity-head { 
+        font-family: var(--primary-header);
+        font-weight: bold;
+        font-size: 13vw;
+        color: var(--constant-text);
+    }
+  }
