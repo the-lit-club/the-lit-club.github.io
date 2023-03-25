@@ -8,6 +8,7 @@ body {
     /* line-height: 4rem; */
     letter-spacing: 0.1em;
     color: var(--constant-text);
+    overflow-y: hidden;
 }
 
 .activity-primary { 
@@ -32,6 +33,7 @@ body {
     font-size: 2rem;
     /* line-height: 2rem; */
     color: var(--constant-text);
+    overflow-y: hidden;
 }
   
 .activity-nav {
@@ -80,6 +82,7 @@ body {
     line-height: 1.2em;
     color: var(--constant-text);
     font-weight: bold;
+    overflow-y: hidden;
     
 }
 
@@ -160,6 +163,7 @@ body {
     font-size: 3rem;
     line-height: 3rem;
     color: var(--constant-text);
+    overflow-y: hidden;
 }
 
 /* For Mobile Phones Portrait or Landscape View */
@@ -168,6 +172,7 @@ body {
         font-size: 1em;
         line-height: 1em;
         letter-spacing: 0.1em;
+        overflow-y: hidden;
     }
     
     .activity-primary { 
@@ -184,6 +189,7 @@ body {
         line-height: 1em;
         letter-spacing: 0.1em;
         color: var(--constant-text);
+        overflow-y: hidden;
     }
 
     .activity-intro {
@@ -208,6 +214,7 @@ body {
         font-weight: bold;
         font-size: 13vw;
         color: var(--constant-text);
+        overflow-y: hidden;
     }
 
     .sim-card {
