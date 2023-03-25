@@ -103,6 +103,21 @@ body {
   overflow-y: hidden;
 }
 
+.locate {
+  /* font-family: 'Oswald', sans-serif; */
+  font-family: var(--primary-header);
+  font-size: 2em;
+  color: var(--constant-text);
+  font-weight: bold;
+}
+
+.location-text {
+  font-family: var(--secondary-header);
+  font-size: 1.5em;
+  color: var(--constant-text);
+  /* font-weight: bold; */
+}
+
 .lp-left {
   border-right: var(--default-border);
   padding-left: 4rem;
@@ -312,9 +327,6 @@ body {
 }
 
 /* PHONES */
-
-
-
 @media (max-width: 575.98px) {
 
   body {
@@ -405,6 +417,22 @@ body {
     animation: marquee 10s linear infinite;
     overflow-y: hidden;
   }
+
+  .locate {
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: var(--primary-header);
+    font-size: 1em;
+    color: var(--constant-text);
+    font-weight: bold;
+  }
+  
+  .location-text {
+    font-family: var(--secondary-header);
+    font-size: 0.7em;
+    color: var(--constant-text);
+    /* font-weight: bold; */
+  }
+  
 
 }
 
