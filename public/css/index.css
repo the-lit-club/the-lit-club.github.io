@@ -10,6 +10,8 @@ html {
   --font-weight-adder: 300;
   --bg-color: #ece1c8;
   --nav-bar: #24444C;
+  /* --nav-bar: #33535c; */
+  /* --nav-bar: #264653; */
   --constant-text: #343434;
   --default-border: 2px solid var(--constant-text);
 }
@@ -27,6 +29,17 @@ body {
 .navbar {
   background-color: var(--nav-bar);
   width: fill;
+}
+
+.nav-logo {
+  color: #ece1c8;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+}
+
+.nav-logo:hover {
+  text-decoration: none;
+  color: #ece1c8;
 }
 
 /* WEEKLY TIME NOTICE */
@@ -206,12 +219,43 @@ body {
   box-shadow: 0 0 0 0 var(--constant-text);
 }
 
+.discord-btn {
+  background-color: #5865F2;
+  /* background-color: #0d7062; */
+  color: #ffffff;
+  /* color: #ffb781; */
+  /* color: #7dd8d5; */
+  border-radius: 10em;
+  max-width: 15rem;
+  font-family: var(--secondary-header);
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.5em 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: var(--default-border);
+  box-shadow: 0 0 0 0 var(--constant-text);
+}
+
+.discord-btn:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 var(--constant-text);
+}
+
+.discord-btn:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 var(--constant-text);
+}
+
 .marquee {
   /* position: relative; */
   width: 100vw;
-  max-width: 100%;
+  max-width: 100vw;
   height: 200px;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .track {
@@ -265,6 +309,8 @@ body {
 
 /* PHONES */
 
+
+
 @media (max-width: 575.98px) {
 
   body {
@@ -298,6 +344,11 @@ body {
   }
 
   .hero-btn {
+    max-width: 10rem;
+    font-size: 1rem;
+  }
+
+  .discord-btn {
     max-width: 10rem;
     font-size: 1rem;
   }
@@ -336,6 +387,10 @@ body {
 
   .activity-border-cancel {
     border-bottom: none;
+  }
+
+  .marquee {
+  overflow-y: hidden;
   }
 
   .track {
@@ -386,6 +441,11 @@ body {
     font-size: 1rem;
   }
 
+  .discord-btn {
+    max-width: 10rem;
+    font-size: 1rem;
+  }
+
   .hero-gif {
     overflow-x: hidden;
   }
@@ -422,6 +482,10 @@ body {
     border-bottom: none;
   }
 
+  .marquee {
+    overflow-y: hidden;
+    }
+
   .track {
     /* position: absolute; */
     white-space: nowrap;
@@ -451,6 +515,10 @@ body {
 
   .activity-border-cancel {
     border-bottom: none;
+  }
+
+  .marquee {
+  overflow-y: hidden;
   }
 
 }

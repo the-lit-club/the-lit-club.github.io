@@ -157,6 +157,9 @@ body {
     box-shadow: 0 0 0 0 var(--constant-text);
   }
 
+  .btn-overflow {
+    overflow-y: hidden;
+  }
   .activity-intro-two {
     font-family: var(--primary-header);
     font-weight: bold;
