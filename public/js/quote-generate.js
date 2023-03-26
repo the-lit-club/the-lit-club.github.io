@@ -9,11 +9,11 @@ function generate() {
         
         '”The floor seemed wonderfully solid. It was comforting to know I had fallen and could fall no farther.“' : ' — Sylvia Plath, The Bell Jar',
 
-        'quote3' : 'author3',
+        '”Many people suffer from the fear of finding oneself alone, and so they don’t find themselves at all.“' : '— Rollo May, Man’s Search for Himself',
 
-        'quote4' : 'author4',
+        '”Never to suffer would never to have been blessed.“' : '― Edgar Allan Poe',
 
-        'quote5' : 'author5'
+        "”You don't visit the wound because it hurts; you visit the wound because it's there.“" : '― Hanya Yanagihara, A Little Life',
     }
 
     const meanings = Object.keys(quoteCard);
