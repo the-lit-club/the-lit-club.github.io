@@ -19,17 +19,26 @@ for (const partialFn of fs.readdirSync(config.partialsDirectory)) {
     .readFileSync(`${config.partialsDirectory}/${partialFn}`)
     .toString();
 
-  partials[partialFn.slice(0, -4)] = isDebug ? contents : asPrettySlugs(contents);
+  partials[partialFn.slice(0, -4)] = isDebug
+    ? contents
+    : asPrettySlugs(contents);
 }
 
 function asPrettySlugs(hbsContent) {
-  return hbsContent.replace(/href=".\/(.*)\.html"/g, 'href="./$1"');
+  return hbsContent
+    .replace(/href=".\/(.*)\.html"/g, 'href="./$1"')
+    .replace("/index", "/");
 }
 
 function buildHTML(filename, hbsContent) {
   hbsContent = parser.renderPartials(hbsContent, partials);
   hbsContent = parser.executeHelpers(hbsContent, helpers);
-  hbsContent = parser.renderVariables(hbsContent, {slug: filename});
+  hbsContent = parser.renderVariables(hbsContent, {
+    slug: filename,
+    href: `https://the-lit-club.github.io/${
+      filename === "index" ? "" : filename
+    }`,
+  });
   if (!isDebug) {
     hbsContent = asPrettySlugs(hbsContent);
   }

@@ -266,6 +266,11 @@ body {
   box-shadow: 0 0 0 0 var(--constant-text);
 }
 
+.discord-logo {
+  width: 2rem;
+  height: auto;
+}
+
 .marquee {
   /* position: relative; */
   width: 800vw;
@@ -425,14 +430,14 @@ body {
     color: var(--constant-text);
     font-weight: bold;
   }
-  
+
   .location-text {
     font-family: var(--secondary-header);
     font-size: 0.7em;
     color: var(--constant-text);
     /* font-weight: bold; */
   }
-  
+
 
 }
 

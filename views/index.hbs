@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Lit Club</title>
     {{> global-head }}
+    <meta property="og:description" content="A roundtable for lovers of literature and seekers of self-improvement." />
 </head>
 
 <body>
@@ -32,7 +33,7 @@
     <section class="hero">
         <div class="row">
             <div class="col-lg-5 lp-left py-3">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScCeS-Wd2suvZI3WGj_qAEcsfKrVrLgPS9rTN0rDh3Jkzg8KA/viewform?usp=sf_link"
+                <a href="https://the-lit-club.github.io/join"
                     target="_blank">
                     <button class="hero-btn">
                         <span class="btn-label">
@@ -42,6 +43,7 @@
                 </a>
                 <a href="https://discord.gg/X6FB2hMC" target="_blank">
                     <button class="discord-btn">
+                        <img src="./img/discord-logo.png" class="discord-logo">
                         <span class="btn-label">
                             DISCORD
                         </span>
@@ -49,8 +51,8 @@
                 </a>
             </div>
             <div class="col-lg-7 lp-left py-3">
-                    <span class="locate">LOCATION: </span> <span class="location-text">GUSTO, Times City, Building 209, 2nd floor</span> 
-            
+                    <span class="locate">LOCATION: </span> <span class="location-text">GUSTO, Times City, Building 209, 2nd floor</span>
+
             </div>
         </div>
     </section>
@@ -333,7 +335,7 @@
     /*
         .from('.second-intro', { y: 20, opacity: 0, duration: 1 }, "1")
         .from('.third-intro', { x: -20, opacity: 0, duration: 1 })
-    */ 
+    */
 
     let tlTwo = gsap.timeline({
         scrollTrigger: {
