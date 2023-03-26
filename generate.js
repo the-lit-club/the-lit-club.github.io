@@ -27,7 +27,7 @@ for (const partialFn of fs.readdirSync(config.partialsDirectory)) {
 function asPrettySlugs(hbsContent) {
   return hbsContent
     .replace(/href=".\/(.*)\.html"/g, 'href="./$1"')
-    .replace("/index", "/");
+    .replace('"/index"', '"/"');
 }
 
 function buildHTML(filename, hbsContent) {
