@@ -324,14 +324,38 @@
     let tlOne = gsap.timeline({
         scrollTrigger: {
             trigger: '.intro-div',
-            start: '.center center',
+            start: '.start center',
             toggleActions: 'restart complete restart'
         }
     });
 
     tlOne.from('.first-intro', { x: -20, opacity: 0, duration: 2 })
-        .from('.second-intro', { y: 20, opacity: 0, duration: 2 }, "1")
-        .from('.third-intro', { x: -20, opacity: 0, duration: 2 })
+    /*
+        .from('.second-intro', { y: 20, opacity: 0, duration: 1 }, "1")
+        .from('.third-intro', { x: -20, opacity: 0, duration: 1 })
+    */ 
+
+    let tlTwo = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.intro-div',
+            start: '.start center',
+            toggleActions: 'restart complete restart'
+        }
+    });
+
+    tlTwo.from('.second-intro', { y: 20, opacity: 0, duration: 2 })
+
+    let tlThree = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.intro-div',
+            start: '.start center',
+            toggleActions: 'restart complete restart'
+        }
+    });
+
+    tlThree.from('.third-intro', { x: -20, opacity: 0, duration: 2 })
+
+
 </script>
 
 </html>
