@@ -31,8 +31,9 @@ function asPrettySlugs(hbsContent) {
 }
 
 function buildHTML(filename, hbsContent) {
-  hbsContent = parser.renderPartials(hbsContent, partials);
-  hbsContent = parser.executeHelpers(hbsContent, helpers);
+  hbsContent = parser.executeHelpers(parser.renderPartials(hbsContent, partials), helpers);
+  hbsContent = parser.renderPartials(parser.executeHelpers(hbsContent, helpers), partials);
+
   hbsContent = parser.renderVariables(hbsContent, {
     slug: filename,
     href: `https://the-lit-club.github.io/${
